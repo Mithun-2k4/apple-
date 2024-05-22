@@ -1,0 +1,35 @@
+int main() {
+    int n;
+    int a[100];
+    int temp;
+    int min;
+    int d[100];
+    printf("enter the number of basket ");
+    scanf("%d",&n);
+     printf("enter the number of apples ");
+   
+    for (int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for (int i=0;i<n-1;i++)
+    {
+        d[i]=a[i+1]-a[i];
+       // printf("%d",d[i]);
+       
+    }
+    min=d[0];
+    for (int i=0;i<n;i++)
+    {
+        if(min>d[i]){
+            min=d[i];
+        }
+    }
+    \\printf("%d",min);
+    for (int i=0;i<n-1;i++) {
+        if(a[i]+min!=a[i+1])
+        { printf("the number of apples in removen basket ");
+        printf("%d",a[i]+min); }
+        }
+   
+}
